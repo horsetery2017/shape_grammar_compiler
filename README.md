@@ -1,6 +1,6 @@
-shape_grammar_compiler
-As a principle verification of the shape grammar,
-this program roughly realizes the text definition 
+shape_grammar_compiler  
+As a principle verification of the shape grammar,    
+this program roughly realizes the text definition   
 and rule derivation of shape. 
 Both shape and labels adopt absolute coordinates, 
 without coordinate transformation, and follow-up implementation.
