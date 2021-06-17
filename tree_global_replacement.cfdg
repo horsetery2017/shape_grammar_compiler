@@ -1,306 +1,190 @@
-CF::MinimumSize = 100
-startshape  start[]
+CF::MinimumSize = 15
+
+startshape tree[ alpha -0.1]
+//startshape sb5[]
+shape tree
+   rule{up_trunk1[ ]}
+   rule{up_trunk1[ ]}
+   rule{up_trunk1[ ]}
 
 
-shape start
-rule{ rand_landscape1[]}
-//rule{ rand_landscape1[]}
-
-shape landscape{
-        c0[]
-        c0[]
-        c0[]
-        c0[]
-        c0[]
-        c0[]
-        c0[]
-        c0[]
-        c0[]
-        c0[]
-        c0[]        
-        c0[]
-        c0[]
-        c0[]
-        //rand_landscape[]
+shape up_trunk1
+rule{ 
+    up_trunk1[s 0.8 y 0.6]
+    trunk1[ ]
+  }
+rule{ 
+    trunk1[ ]
+    up_trunk1[s 0.8 y 0.6]
+    up_trunk1 [r 60 s 0.7 y 0.5]
+    up_trunk1 [r -10 s 0.7 y 0.6]
+    up_trunk1 [r 10 s 0.7 y 0.6]
 }
-
-shape landscape1{
-    c1[]
-    c1[]
-    c1[]
-        c1[]
-    c1[]
-    c1[]
-        c1[]
-    c1[]
-    c1[]
-        c1[]
-    c1[]
-    c1[]
-        c1[]
-    c1[]
-    c1[]
-    //landscape1[]
+rule{ 
+    trunk1[ ]
+    up_trunk1[s 0.9 y 0.6]
+    up_trunk1  [r 35 s 0.7 y 0.5]
+    up_trunk1  [r -60 s 0.7 y 0.5]
 }
-shape rand_landscape1
-rule{landscape1[s 0.9]}
-rule{landscape1[s 0.5]}
-rule{landscape1[x -0.5]}
-rule{landscape1[x 0.5]}
-
-
-shape rand_landscape
-rule{landscape[s 0.9]}
-rule{landscape[s 0.5]}
-rule{landscape[x -0.5]}
-rule{landscape[x 0.5]}
-
-shape c0
-rule{fs0[ x 0.5 ]}
-rule{fs1[x -0.5 ]}
-rule{fs1[x 0.5 ]}
-rule{fs0[x -0.5 ]}
-rule{fs2[x -0.5 ]}
-rule{fs2[x 0.5 ]}
-rule{fs3[x 0.5 ]}
-rule{fs3[x -0.5 ]}
-rule{fs4[x 0.5 ]}
-rule{fs4[x -0.5 ]}
-rule{fs5[x 0.5 ]}
-rule{fs5[x -0.5 ]}
-
-
-shape c1
-rule{fs6[x 0.5]}
-rule{fs6[x -0.5]}
-rule{fs6[x 0.9]}
-rule{fs6[x -0.9]}
-rule{fs7[x 0.5]}
-rule{fs7[x -0.5]}
-rule{fs7[x 0.9]}
-rule{fs7[x -0.9]}
-rule{fs8[x 0.5]}
-rule{fs8[x -0.5]}
-rule{fs8[x 0.9]}
-rule{fs8[x -0.9]}
-rule{fs9[x 0.5]}
-rule{fs9[x -0.5]}
-rule{fs9[x 0.9]}
-rule{fs9[x -0.9]}
-
-
-shape fs0{
-    s0[flip -1 alpha -0.7 ]
+rule{ 
+    trunk1[ ]
+    up_trunk1 [r -10 s 0.7 y 0.6]
 }
-
-shape fs1{
-    s1[flip -1 alpha -0.7]
+rule{ 
+    trunk1[ ]
+    up_trunk1 [r -40 s 0.7 y 0.6]
+    up_trunk1 [r  40 s 0.7 y 0.6]
+    up_trunk1 [r 10 s 0.7 y 0.6]
 }
-shape fs2{
-    s2[flip -1 alpha -0.7]
+rule{ 
+    trunk1[ ]
+    up_trunk1 [r 30 s 0.7 y 0.6]
+    up_trunk1 [r -30 s 0.7 y 0.6]
+    up_trunk1 [r -10 s 0.7 y 0.6]
 }
-shape fs3{
-    s3[flip -1 alpha -0.7]
-}
-shape fs4{
-    s4[flip -1 alpha -0.7]
-}
-
-shape fs5{
-    s5[flip -1 alpha -0.7]
+rule{ 
+    trunk1[ ]
+    up_trunk1 [r 45 s 0.7 y 0.6]
+    up_trunk1 [r -45 s 0.7 y 0.6]
 }
 
 
-shape fs6{
-    s6[flip -1 alpha -0.7]
+
+shape trunk1
+rule{ 
+    wooden [] 
+    wooden [s 0.8 y 0.6]
 }
-shape fs7{
-    s7[flip -1 alpha -0.7]
+rule{ 
+    wooden [] 
+    wooden [r 60 s 0.7 y 0.2]
 }
-shape fs8{
-    s8[flip -1 alpha -0.7]
-}
-shape fs9{
-    s9[flip -1 alpha -0.7]
+rule{ 
+    wooden [] 
+    wooden [r -60 s 0.7 y 0.2]
 }
 
+shape wooden
+rule{sb0 []}
+rule{sb1 []}
+rule{sb2 []}
+rule{sb3 []}
+rule{sb4 []}
+rule{sb5 []}
 
-path s0{
-MOVETO( -0.8, 0.256)
-LINETO( -0.456, -0.344)
-LINETO( -0.156, -0.644)
-LINETO( 0.068, -0.84)
-LINETO( 0.46, -0.648)
-LINETO( 0.772, -0.272)
-LINETO( 0.864, 0.044)
-LINETO( 0.88, 0.464)
-LINETO( 0.296, 0.524)
-LINETO( -0.424, 0.628)
-LINETO( -0.812, 0.496)
-LINETO( -0.888, 0.392)
+shape sb0{b0 [flip -1]}
+shape sb1{b1 [flip -1]}
+shape sb2{b2 [flip -1]}
+shape sb3{b3 [flip -1]}
+shape sb4{b4 [flip -1]}
+shape sb5{b5 [flip -1]}
+
+
+path b0{
+MOVETO( -0.148, -0.012)
+LINETO( -0.116, -0.232)
+LINETO( -0.116, -0.428)
+LINETO( -0.088, -0.684)
+LINETO( -0.06, -0.772)
+LINETO( 0.0, -0.776)
+LINETO( 0.092, -0.76)
+LINETO( 0.08, -0.656)
+LINETO( 0.08, -0.476)
+LINETO( 0.108, -0.428)
+LINETO( 0.092, -0.356)
+LINETO( 0.092, -0.236)
+LINETO( 0.092, -0.16)
+LINETO( 0.092, -0.072)
+LINETO( 0.104, -0.012)
+LINETO( -0.088, 0.004)
+CLOSEPOLY()
+}
+path b1{
+MOVETO( -0.104, -0.012)
+LINETO( -0.076, -0.264)
+LINETO( -0.088, -0.488)
+LINETO( -0.132, -0.668)
+LINETO( -0.028, -0.712)
+LINETO( 0.0, -0.728)
+LINETO( 0.016, -0.596)
+LINETO( 0.048, -0.372)
+LINETO( 0.06, -0.236)
+LINETO( 0.06, -0.116)
+LINETO( 0.06, -0.028)
+LINETO( 0.06, -0.012)
+LINETO( -0.04, -0.024)
+CLOSEPOLY()
+}
+path b2{
+MOVETO( -0.148, -0.024)
+LINETO( -0.148, -0.34)
+LINETO( -0.16, -0.52)
+LINETO( -0.088, -0.804)
+LINETO( -0.056, -0.94)
+LINETO( 0.136, -0.892)
+LINETO( 0.032, -0.688)
+LINETO( -0.012, -0.476)
+LINETO( 0.016, -0.312)
+LINETO( 0.06, -0.1)
+LINETO( 0.076, -0.024)
+LINETO( -0.088, -0.024)    
+CLOSEPOLY()
+}
+path b3{
+ MOVETO( -0.104, -0.012)
+LINETO( -0.06, -0.516)
+LINETO( 0.0, -0.728)
+LINETO( 0.044, -0.972)
+LINETO( 0.104, -0.952)
+LINETO( 0.104, -0.82)
+LINETO( 0.076, -0.552)
+LINETO( 0.088, -0.416)
+LINETO( 0.148, -0.396)
+LINETO( 0.148, -0.372)
+LINETO( 0.124, -0.368)
+LINETO( 0.104, -0.352)
+LINETO( 0.104, -0.28)
+LINETO( 0.104, -0.116)
+LINETO( 0.104, -0.072)
+LINETO( 0.104, -0.012)
+LINETO( -0.056, 0.02)   
 CLOSEPOLY()
 }
 
-path s1{
-MOVETO( -0.752, 0.6)
-LINETO( -0.812, 0.344)
-LINETO( -0.772, 0.032)
-LINETO( -0.712, -0.252)
-LINETO( -0.652, -0.492)
-LINETO( -0.532, -0.72)
-LINETO( -0.172, -0.36)
-LINETO( 0.16, -0.136)
-LINETO( 0.444, 0.044)
-LINETO( 0.58, 0.42)
-LINETO( 0.836, 0.66)
-LINETO( -0.5, 0.632)
-LINETO( -0.68, 0.632)
+path b4{
+MOVETO( -0.148, 0.004)
+LINETO( -0.136, -0.472)
+LINETO( -0.164, -0.516)
+LINETO( -0.132, -0.564)
+LINETO( -0.104, -0.592)
+LINETO( -0.076, -0.832)
+LINETO( -0.06, -0.908)
+LINETO( -0.06, -0.952)
+LINETO( 0.016, -0.956)
+LINETO( 0.076, -0.94)
+LINETO( 0.076, -0.804)
+LINETO( 0.076, -0.58)
+LINETO( 0.028, -0.308)
+LINETO( 0.044, -0.16)
+LINETO( 0.06, -0.128)
+LINETO( 0.048, -0.096)
+LINETO( 0.044, 0.004)
+LINETO( -0.148, -0.008)    
 CLOSEPOLY()
 }
-
-path s2{
-MOVETO( -0.872, 0.764)
-LINETO( -0.756, 0.48)
-LINETO( -0.396, 0.256)
-LINETO( -0.128, 0.016)
-LINETO( 0.052, -0.252)
-LINETO( 0.28, -0.48)
-LINETO( 0.444, -0.72)
-LINETO( 0.624, -0.48)
-LINETO( 0.712, 0.0)
-LINETO( 0.744, 0.464)
-LINETO( 0.864, 0.628)
-LINETO( 0.88, 0.824)
-LINETO( -0.288, 0.768)
-LINETO( -0.752, 0.768)
+path b5{
+MOVETO( -0.104, -0.804)
+LINETO( -0.104, -0.4)  
+LINETO( -0.148, -0.4)  
+LINETO( -0.104, -0.368)
+LINETO( -0.116, -0.296)
+LINETO( -0.076, -0.176)
+LINETO( -0.088, -0.024)
+LINETO( -0.104, 0.008)
+LINETO( 0.06, 0.02)
+LINETO( 0.076, -0.172)
+LINETO( 0.048, -0.456)
+LINETO( 0.032, -0.696)
+LINETO( 0.0, -0.832)
 CLOSEPOLY()
 }
-path s3{
-MOVETO( -0.652, 0.108)
-LINETO( -0.368, -0.208)
-LINETO( -0.188, -0.552)
-LINETO( -0.08, -0.84)
-LINETO( -0.008, -0.928)
-LINETO( 0.352, -0.496)
-LINETO( 0.592, -0.076)
-LINETO( 0.88, 0.24)
-LINETO( 0.892, 0.492)
-LINETO( 0.312, 0.508)
-LINETO( -0.304, 0.496)
-LINETO( -0.768, 0.508)
-CLOSEPOLY()
-}
-path s4{
-MOVETO( -0.888, 0.36)
-LINETO( -0.812, -0.048)
-LINETO( -0.548, -0.252)
-LINETO( -0.112, -0.524)
-LINETO( -0.036, -0.528)
-LINETO( 0.22, -0.376)
-LINETO( 0.368, -0.288)
-LINETO( 0.64, 0.196)
-LINETO( 0.772, 0.3)
-LINETO( 0.7, 0.372)
-LINETO( -0.032, 0.404)
-LINETO( -0.56, 0.36)
-LINETO( -0.844, 0.376)
-CLOSEPOLY()
-}
-path s5{
-MOVETO( -0.68, 0.108)
-LINETO( -0.516, -0.18)
-LINETO( -0.26, -0.268)
-LINETO( 0.1, -0.312)
-LINETO( 0.324, -0.152)
-LINETO( 0.652, 0.012)
-LINETO( 0.596, 0.192)
-LINETO( 0.22, 0.252)
-LINETO( -0.352, 0.272)
-LINETO( -0.604, 0.228)
-LINETO( -0.68, 0.168)
-CLOSEPOLY()
-}
-
-path s6{
-MOVETO( -0.824, 0.004)
-LINETO( -0.6, -0.204)
-LINETO( -0.376, -0.292)
-LINETO( -0.048, -0.352)
-LINETO( 0.192, -0.396)
-LINETO( 0.24, -0.368)
-LINETO( 0.288, -0.292)
-LINETO( 0.468, -0.264)
-LINETO( 0.6, -0.176)
-LINETO( 0.78, -0.1)
-LINETO( 0.9, -0.024)
-LINETO( 0.648, -0.012)
-LINETO( 0.3, 0.004)
-LINETO( 0.076, 0.004)
-LINETO( -0.06, -0.008)
-LINETO( -0.328, 0.004)
-LINETO( -0.552, -0.008)
-LINETO( -0.732, -0.008)
-LINETO( -0.764, -0.008)
-CLOSEPOLY()
-}
-
-path s7{
-MOVETO( -0.784, -0.036)
-LINETO( -0.528, -0.412)
-LINETO( -0.392, -0.528)
-LINETO( -0.2, -0.696)
-LINETO( -0.092, -0.828)
-LINETO( 0.148, -0.772)
-LINETO( 0.4, -0.728)
-LINETO( 0.508, -0.576)
-LINETO( 0.596, -0.292)
-LINETO( 0.808, -0.188)
-LINETO( 0.78, -0.068)
-LINETO( 0.736, -0.008)
-LINETO( 0.028, 0.012)
-LINETO( -0.18, -0.02)
-LINETO( -0.584, -0.02)
-LINETO( -0.664, -0.036)
-CLOSEPOLY()
-}
-path s8{
-MOVETO( -0.792, -0.14)
-LINETO( -0.42, -0.56)
-LINETO( -0.312, -0.74)
-LINETO( -0.24, -0.888)
-LINETO( -0.012, -0.892)
-LINETO( 0.18, -0.788)
-LINETO( 0.348, -0.456)
-LINETO( 0.556, -0.336)
-LINETO( 0.556, -0.216)
-LINETO( 0.544, -0.024)
-LINETO( 0.276, -0.02)
-LINETO( -0.192, -0.004)
-LINETO( -0.564, 0.024)
-LINETO( -0.552, -0.108)
-LINETO( -0.776, -0.052)
-LINETO( -0.748, -0.14)
-CLOSEPOLY()
-}
-path s9{
-MOVETO( -0.504, -0.004)
-LINETO( -0.192, -0.636)
-LINETO( -0.1, -0.784)
-LINETO( 0.004, -0.888)
-LINETO( 0.052, -0.948)
-LINETO( 0.064, -0.892)
-LINETO( 0.124, -0.684)
-LINETO( 0.212, -0.472)
-LINETO( 0.288, -0.368)
-LINETO( 0.364, -0.156)
-LINETO( 0.424, -0.084)
-LINETO( 0.468, -0.036)
-LINETO( 0.172, -0.036)
-LINETO( -0.292, 0.008)
-LINETO( -0.412, -0.02)
-CLOSEPOLY()
-}
-
-
-
-
