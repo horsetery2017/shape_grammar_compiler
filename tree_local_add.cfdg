@@ -1,0 +1,77 @@
+CF::MinimumSize = 8
+    
+startshape init[ alpha -0.1 ]
+
+shape init{grow[]}
+
+shape grow
+rule{ 
+    at[] 
+    grow[s 0.96 r -10 y 0.1]
+  }
+rule{ 
+    at[] 
+    grow[s 0.96 r -10 y 0.1]
+  }
+rule{ 
+    at[] 
+    grow[s 0.96  y 0.12]
+  }
+rule{ 
+    at[] 
+    grow[s 0.96  y 0.2]
+  }
+rule{ 
+    at[] 
+    grow[s 0.96  y 0.18]
+  }  
+rule{ 
+    at[] 
+    grow[s 0.96  y 0.13]
+  }
+rule{ 
+    at[] 
+    grow[s 0.96  y 0.15]
+  }
+rule{ 
+    at[] 
+    grow[s 0.96  y 0.13]
+  }
+rule{ at[]  
+    grow[s 0.96 r 35 y 0.1]
+    grow[s 0.96 r -35 y 0.1]
+  }
+
+shape  at
+rule{atom0[flip -1]}
+rule{atom1[flip -1]}
+rule{atom2[flip -1]}
+
+path atom0{
+MOVETO( -0.108, -0.204)
+LINETO( -0.132, -0.008)
+LINETO( 0.12, -0.012)
+LINETO( 0.108, -0.204)
+LINETO( -0.088, -0.208)
+CLOSEPOLY()
+}
+path atom1{
+MOVETO( -0.116, -0.204)
+LINETO( -0.132, 0.02)
+LINETO( 0.136, -0.008)
+LINETO( 0.136, -0.248)
+LINETO( -0.132, -0.22)
+LINETO( -0.12, -0.192)
+CLOSEPOLY()
+}
+path atom2{
+MOVETO( -0.12, -0.176)
+LINETO( 0.096, -0.16)
+LINETO( 0.096, -0.132)
+LINETO( 0.108, -0.116)
+LINETO( 0.092, -0.072)
+LINETO( 0.08, 0.004)
+LINETO( -0.144, 0.008)
+LINETO( -0.132, -0.172)    
+CLOSEPOLY()
+}
